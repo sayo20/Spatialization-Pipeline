@@ -1,0 +1,27 @@
+% Read the WAV files
+spk1_90 = load("/Users/u618151/Desktop/Work/Datasets/Sppatializatio_Data/Re-createdCorrectly/Spatialization Pipeline/CenterExample/Sounds/spk1_90_ild.mat");
+spk2_270 = load("/Users/u618151/Desktop/Work/Datasets/Sppatializatio_Data/Re-createdCorrectly/Spatialization Pipeline/CenterExample/Sounds/spk2_-90_ild.mat");
+
+
+% Plot the spectrograms side by side
+figure;
+
+% Plot spectrogram of file 1
+subplot(1, 3, 1);
+imagesc(spk1_90.ILD_inDB_mn_);
+colormap('redblue');
+colorbar;
+title('Speaker 1 at 90');
+
+% % Plot spectrogram of file 2
+subplot(1, 3, 2);
+imagesc(spk2_270.ILD_inDB_mn_);
+title('Spectrogram of File 2');
+% 
+% % Sum the two signals and plot the spectrogram
+% sum_data = spk1_90.ILD_inDB_mn_ + spk2_270.ILD_inDB_mn_;
+% subplot(1, 3, 3);
+% imagesc(sum_data);
+% title('Spectrogram of Sum');
+% 
+% colormap('redwhiteblue'); % Set colormap to redwhiteblue
